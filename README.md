@@ -11,5 +11,10 @@ Conjunto de scripts pequeños que se utilizan para varios propósitos
 
     Versión: v1.0
 
-    Script que convierte una IPv4 en formato decimal y devuelve en formato binario
+    Script que convierte una IPv4 en formato decimal y devuelve en formato binario.
 
+* small_network_grapher.py
+
+    Versión v1.0
+
+    Se encarga de graficar una pequeña red. 

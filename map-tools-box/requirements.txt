@@ -1,0 +1,10 @@
+# Run: pip install -r requirements.txt
+#
+# Syntax example:
+# pymongo==3.3.0 
+# psutil>=2.0
+
+setuptools
+virtualenv
+networkx
+matplotlib
