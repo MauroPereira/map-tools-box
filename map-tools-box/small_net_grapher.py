@@ -23,20 +23,20 @@ host_img = plt.imread("host.png")
 # Mostrar imágenes para los nodos
 for node, (x, y) in pos.items():
     if node == "Switch":
-        imagebox = OffsetImage(switch_img, zoom=0.05)
+        imagebox = OffsetImage(switch_img, zoom=0.5)
         ab = AnnotationBbox(imagebox, (x, y), frameon=False)
         plt.gca().add_artist(ab)
         
         # Agregar etiqueta al switch
         plt.text(x, y + 0.1, node, fontsize=12, ha="center")
     elif node == "Host":
-        imagebox = OffsetImage(host_img, zoom=0.05)
+        imagebox = OffsetImage(host_img, zoom=0.5)
         ab = AnnotationBbox(imagebox, (x, y), frameon=False)
         plt.gca().add_artist(ab)
         
-        # Agregar etiqueta y dirección IP al host
+        # Agregar etiqueta y dirección IP al host (moviendo la IP más abajo)
         plt.text(x, y + 0.1, node, fontsize=12, ha="center")
-        plt.text(x, y - 0.1, G.nodes[node]["ip"], fontsize=12, ha="center")
+        plt.text(x, y - 0.2, G.nodes[node]["ip"], fontsize=12, ha="center")
 
 plt.axis('off')  # Desactivar ejes
 plt.show()
