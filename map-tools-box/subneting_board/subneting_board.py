@@ -23,6 +23,7 @@ def generar_tabla_subredes(ip_inicial, num_ips_por_subred, num_subredes):
             str(direccion_red + 1),  # IP Inicial de Host
             str(ip_broadcast - 1),  # IP Final de Host
             str(ip_broadcast),  # Dirección IP de Broadcast
+            f"{num_ips_por_subred} IPs",  # Cant. de IPs por Subred
         ]
         tabla.append(fila)
 
@@ -31,16 +32,17 @@ def generar_tabla_subredes(ip_inicial, num_ips_por_subred, num_subredes):
 
     # Imprimir la tabla
     print(
-        "{:<15} {:<15} {:<20} {:<20} {:<15}".format(
+        "{:<15} {:<15} {:<20} {:<20} {:<15} {:<30}".format(
             "Subred",
             "IP de Red",
             "IP Inicial de Host",
             "IP Final de Host",
             "IP de Broadcast",
+            "Cant. de IPs por Subred",
         )
     )
     for fila in tabla:
-        print("{:<15} {:<15} {:<20} {:<20} {:<15}".format(*fila))
+        print("{:<15} {:<15} {:<20} {:<20} {:<15} {:<30}".format(*fila))
 
 
 if __name__ == "__main__":
